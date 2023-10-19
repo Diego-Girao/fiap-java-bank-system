@@ -22,5 +22,12 @@ public class CurrentAccount extends Account {
     public double getTotalBalance(){
         return super.getBalance() + overdraft;
     }
+
+    //Polimorfismo Sobrecrita de método, do método withdraw
+    @Override
+    public void withdraw(double value){
+        value += 10;
+        super.withdraw(value);
+    }
 }
 
